@@ -1,0 +1,27 @@
+
+
+
+h1{
+    color: aqua;
+}
+p{
+    color: #000;
+}
+p{
+    color: forestgreen;
+}
+
+#ejemplo-h1{
+    color: blueviolet;
+    font-size: 30pt;
+}
+
+.euro{
+    color: darkkhaki;
+    font-size: 20pt;
+}
+
+.latam{
+    color: darkgoldenrod;
+    font-size: 30pt;
+}
