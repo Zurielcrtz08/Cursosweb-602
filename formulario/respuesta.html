@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <div id="resultados"></div>
+    <div>
+        <a href="formulario.html">
+            regresar al formulario
+        </a>
+        </div>
+    <script>
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return Object.fromEntries(params.entries());
+        }
+
+        function mostrarResultados() {
+            const params = getQueryParams();
+            const resultadosDiv = document.getElementById('resultados');
+            resultadosDiv.innerHTML = `
+                <p><strong>Nombre:</strong> ${params.username}</p>
+                <p><strong>Apellido Paterno:</strong> ${params.lastname1}</p>
+                <p><strong>Apellido Materno:</strong> ${params.lastname2}</p>
+                <p><strong>Edad:</strong> ${params.age}</p>
+                <p><strong>Fecha Nacimiento:</strong> ${params.birthdate}</p>
+                <p><strong>Correo:</strong> ${params.mail}</p>
+                <p><strong>Comentarios:</strong> ${params.comments}</p>
+            `;
+        }
+
+        window.onload = mostrarResultados;
+    </script>
+</body>
+</html>
+
+
+
